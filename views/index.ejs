@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Profile</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="/BACKEND/DATABASE SERVER/USER_CRUD_MINI_PROJECT/public/stylesheets/style.css">
+  </head>
+
+  <body class="bg-zinc-900 font-mono text-zinc-100 min-h-screen flex flex-col">
+    <!-- main content  -->
+    <main class="flex-grow p-10 ">
+      <!-- Page title -->
+      <h1 class="text-4xl font-bold text-zinc-300">CRUD Profile</h1>
+
+      <!-- Sub-header: Create Profile text and link to view all profiles -->
+      <div class="font-medium text-zinc-800 mt-10 mb-5 flex justify-between">
+        <div class="text-blue-600 text-2xl">Create Profile</div>
+        <a class="text-zinc-500 text-xl" href="/read">View all ></a>
+      </div>
+
+      <!-- Form to create a new profile -->
+      <div>
+        <form action="/create" method="post"
+          class="flex justify-start gap-5 items-center flex-col md:flex-row md:flex-wrap">
+
+          <!-- Name input field -->
+          <label for="name">Name</label>
+          <input class="border-1 border-blue-600 p-3 rounded-xl focus:outline-none focus:border-dashed focus:bg-black"
+            type="text" name="name" id="name" placeholder="xxx..." required>
+
+          <!-- Email input field -->
+          <label for="email">Email</label>
+          <input class="border-1 border-blue-600 p-3 rounded-xl focus:outline-none focus:border-dashed focus:bg-black"
+            type="email" name="email" id="email" placeholder="xxx@example.com">
+
+          <!-- Profile image URL input field -->
+          <label for="image">Profile Image URL</label>
+          <input class="border-1 border-blue-600 p-3 rounded-xl focus:outline-none focus:border-dashed focus:bg-black"
+            type="text" name="image" id="image" placeholder="Image URL" required>
+
+          <!-- Submit button -->
+          <input type="submit" class="bg-black p-3 rounded-xl border-blue-600 border-2 ml-5" value="Create Profile">
+        </form>
+      </div>
+    </main>
+
+    <footer class="bg-zinc-900 text-center h-10  text-zinc-400 text-sm py-2">
+      <a href="http://github.com/AKABharat">AKABharat &copy;</a>
+    </footer>
+  </body>
+
+</html>
